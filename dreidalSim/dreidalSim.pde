@@ -3,7 +3,7 @@ Player[] players;
 int[] wins;
 int pot;
 int n = 4;
-int startingGelt = 25;
+int startingGelt = 5;
 boolean playing;
 void setup(){
   frameRate(1000);
