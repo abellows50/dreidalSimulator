@@ -28,7 +28,7 @@ void draw(){
     setUp();
     playing=true;
   }
-  drawBars(wins, width/n, height, 3);
+  drawBars(wins, width/n, height, 1);
 }
 void setUp(){
   for(int i = 0; i<players.length; i++){
@@ -55,7 +55,7 @@ void drawBars(int[] data, int barWidth, int yBaseline, int scaler) {
     textAlign(CENTER);
     textSize(10);
     fill(0,0,0);
-    text(calculateWinPercentage(i),x+barWidth/2,yBaseline);
+    text(calculateWinPercentage(wins,i),x+barWidth/2,yBaseline);
     fill(255);
     x+= barWidth;
   }//loop through array
