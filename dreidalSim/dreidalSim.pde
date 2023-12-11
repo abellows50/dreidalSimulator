@@ -55,7 +55,7 @@ void drawBars(int[] data, int barWidth, int yBaseline, int scaler) {
     textAlign(CENTER);
     textSize(10);
     fill(0,0,0);
-    text(i,x+barWidth/2,yBaseline);
+    text(calculateWinPercentage(i),x+barWidth/2,yBaseline);
     fill(255);
     x+= barWidth;
   }//loop through array
@@ -71,4 +71,12 @@ int winner(Player[] players){
      }
   }
   return maxIndex;
+}
+
+int calculateWinPercentage(int[] wins, int n){
+  int total = 0;
+  for(int i = 0; i<wins.length; i++){
+    total+=wins[i];
+  }
+  return (int)(100.0*wins[n]/total);
 }
